@@ -1,3 +1,20 @@
-<h1>
-  {{title}}
-</h1>
+<header class="header-6">
+    <div class="branding">
+        <a href="#" class="brand-logo">{{title}}</a>
+    </div>
+    <div class="header-nav">
+        <a class="nav-link nav-text" routerLink="about">About</a>
+        <a class="nav-link nav-text" routerLink="marketplace">Marketplace</a>
+    </div>
+    <div class="header-actions">
+        <a href="javascript://" class="nav-link nav-icon">
+            <clr-icon shape="cog"></clr-icon>
+        </a>
+    </div>
+</header>
+
+<body>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</body>
