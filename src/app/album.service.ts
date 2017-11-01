@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Album } from './album.model';
-// import { ALBUMS } from './mock-albums';
+import { ALBUMS } from './mock-albums';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database-deprecated';
 
 
