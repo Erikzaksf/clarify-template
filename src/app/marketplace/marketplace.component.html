@@ -4,12 +4,12 @@
 <clr-datagrid>
     <clr-dg-column>Artist</clr-dg-column>
     <clr-dg-column>Title</clr-dg-column>
-    <clr-dg-column>Album ID</clr-dg-column>
+
 
     <clr-dg-row *clrDgItems="let album of albums | async" (click)="goToDetailPage(album)">
         <clr-dg-cell>{{album.artist}}</clr-dg-cell>
         <clr-dg-cell>{{album.title}}</clr-dg-cell>
-        <clr-dg-cell>{{album.id}}</clr-dg-cell>
+
 
     </clr-dg-row>
 
