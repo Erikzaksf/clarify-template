@@ -1,36 +1,16 @@
 <h2 class="centered">Marketplace</h2>
 <hr>
-<table class="">
-  <thead>
-    <tr>
-      <th>Album</th>
-      <th>Artist</th>
-      <th>ID</th>
-    </tr>
-  </thead>
-  <tbody>
-    <div *ngFor="let album of albums" (click)="goToDetailPage(album)" class="panel panel-default">
-      <tr>
-        <td>{{album.title}}</td>
-        <td>{{album.artist}}</td>
-        <td>{{album.id}}</td>
-      </tr>
-    </div>
-  </tbody>
-</table>
+
 <clr-datagrid>
-    <clr-dg-column>User ID</clr-dg-column>
-    <clr-dg-column [clrDgField]="'name'">Name</clr-dg-column>
+    <clr-dg-column>Artist</clr-dg-column>
+    <clr-dg-column>Title</clr-dg-column>
+    <clr-dg-column>Album ID</clr-dg-column>
 
-
-    <clr-dg-row *clrDgItems="let album of albums">
+    <clr-dg-row *clrDgItems="let album of albums | async" (click)="goToDetailPage(album)">
         <clr-dg-cell>{{album.artist}}</clr-dg-cell>
-        <clr-dg-cell>{{album.album}}</clr-dg-cell>
+        <clr-dg-cell>{{album.title}}</clr-dg-cell>
         <clr-dg-cell>{{album.id}}</clr-dg-cell>
 
-        <clr-dg-cell>
-            <span class="color-square" [style.backgroundColor]="user.color"></span>
-        </clr-dg-cell>
     </clr-dg-row>
 
     <clr-dg-footer></clr-dg-footer>
