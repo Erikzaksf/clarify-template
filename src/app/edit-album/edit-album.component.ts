@@ -15,4 +15,8 @@ export class EditAlbumComponent implements OnInit {
   ngOnInit() {
   }
 
+  doNothing(){
+    
+  }
+
 }
