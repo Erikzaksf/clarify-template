@@ -6,14 +6,14 @@
   <clr-dg-column>Artist</clr-dg-column>
   <clr-dg-column>Title</clr-dg-column>
   <clr-dg-column *ngIf="currentRoute === '/admin'">Description  </clr-dg-column>
-      <clr-dg-row *ngFor="let album of albums | async" >
+      <clr-dg-row *clrDgItems="let album of albums | async" >
 
 
       <clr-dg-cell *ngIf="currentRoute === '/admin'">
       <app-edit-album [selectedAlbum]="album"></app-edit-album>
       </clr-dg-cell>
-      <clr-dg-cell (click)="goToDetailPage(album)">{{album.artist}}</clr-dg-cell>
-      <clr-dg-cell>{{album.title}}</clr-dg-cell>
+      <clr-dg-cell class="artistStyle" (click)="goToDetailPage(album)" >{{album.artist}}</clr-dg-cell>
+      <clr-dg-cell class="titleStyle">{{album.title}}</clr-dg-cell>
       <clr-dg-cell *ngIf="currentRoute === '/admin'">
       {{album.description}}
       </clr-dg-cell>

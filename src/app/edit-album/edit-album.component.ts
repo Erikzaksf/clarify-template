@@ -21,4 +21,10 @@ export class EditAlbumComponent implements OnInit {
   this.albumService.updateAlbum(albumToUpdate);
   }
 
+  beginDeletingAlbum(albumToDelete){
+  confirm("Are you sure you want to delete this item from the catalog?");{
+    this.albumService.deleteAlbum(albumToDelete);
+    }
+  }
+
 }
