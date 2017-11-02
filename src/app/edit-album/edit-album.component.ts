@@ -22,7 +22,7 @@ export class EditAlbumComponent implements OnInit {
   }
 
   beginDeletingAlbum(albumToDelete){
-  confirm("Are you sure you want to delete this item from the catalog?");{
+  if(confirm("Are you sure you want to delete this item from the catalog?")){
     this.albumService.deleteAlbum(albumToDelete);
     }
   }
