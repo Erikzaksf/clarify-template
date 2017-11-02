@@ -4,14 +4,16 @@
 <clr-datagrid>
     <clr-dg-column>Artist</clr-dg-column>
     <clr-dg-column>Title</clr-dg-column>
-
+    <clr-dg-column *ngIf="currentRoute === '/admin'">Description  </clr-dg-column>
 
     <clr-dg-row *clrDgItems="let album of albums | async" (click)="goToDetailPage(album)">
-        <clr-dg-cell>{{album.artist}}</clr-dg-cell>
-        <clr-dg-cell>{{album.title}}</clr-dg-cell>
-x
-
+      <clr-dg-cell>{{album.artist}}</clr-dg-cell>
+      <clr-dg-cell>{{album.title}}</clr-dg-cell>
+      <clr-dg-cell *ngIf="currentRoute === '/admin'">
+      {{album.description}}
+        <hr>
+        <app-edit-album></app-edit-album>
+      </clr-dg-cell>
     </clr-dg-row>
-
     <clr-dg-footer></clr-dg-footer>
 </clr-datagrid>

@@ -14,6 +14,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { AdminComponent } from './admin/admin.component';
 import 'clarity-icons';
+import { EditAlbumComponent } from './edit-album/edit-album.component';
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
@@ -37,7 +38,8 @@ export const firebaseConfig = {
        AboutComponent,
        MarketplaceComponent,
        AlbumDetailComponent,
-       AdminComponent
+       AdminComponent,
+       EditAlbumComponent
       ],
      bootstrap: [ AppComponent ]
 })
